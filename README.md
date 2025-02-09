@@ -1,149 +1,66 @@
-# 🚀 Taller de Programación Orientada a Objetos (POO)
+# Proyecto Final Taller
 
-## 📝 Descripción del Proyecto
+Este proyecto es una aplicación de escritorio en Java con una interfaz basada en `JOptionPane`, que permite a un usuario simular actividades como correr y descansar mientras se gestiona su fatiga. Se implementa usando Maven como herramienta de gestión de dependencias y construcción.
 
-Este proyecto es una solución desarrollada como parte de un **taller práctico** para la materia de **Programación Orientada a Objetos (POO)**. El objetivo principal es demostrar los conceptos fundamentales de POO, como **encapsulamiento**, **herencia**, **polimorfismo** y **abstracción**, mediante la implementación de un sistema de gestión básico. 
+## 🚀 Tecnologías utilizadas
 
-El proyecto está construido con **Java**, un lenguaje ampliamente utilizado en la enseñanza de POO por su claridad y robustez. Está dirigido a **estudiantes** y **desarrolladores** que deseen reforzar sus conocimientos en programación orientada a objetos y aplicar estos conceptos en un proyecto real.
+- **Java** (JDK 8+)
+- **Maven**
+- **Swing (`JOptionPane`)**
 
----
+## 📂 Estructura del Proyecto
 
-## 📌 Tabla de Contenidos
+El proyecto sigue una estructura de paquetes de la siguiente manera:
 
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Contribución](#-contribución)
-- [Contacto](#-contacto)
-
----
-
-## 🛠️ Instalación
-
-Sigue estos pasos para instalar y configurar el proyecto en tu entorno local.
-
-### Requisitos previos
-
-Asegúrate de tener instaladas las siguientes herramientas:
-
-- [Java JDK 11 o superior](https://www.oracle.com/java/technologies/javase-downloads.html)
-- [Git](https://git-scm.com/)
-- Un IDE como [IntelliJ IDEA](https://www.jetbrains.com/idea/) o [Eclipse](https://www.eclipse.org/)
-
-### Pasos de instalación
-
-1. Clona el repositorio:
-
-   ```bash
-   git clone https://github.com/tu-usuario/taller-poo.git
-
-1. Navega al directorio del proyecto:
-
-   bash
-
-   Copy
-
-   ```
-   cd taller-poo
-   ```
-
-2. Abre el proyecto en tu IDE favorito.
-
-3. Compila y ejecuta el proyecto desde el IDE o usando la terminal:
-
-   bash
-
-   Copy
-
-   ```bash
-   javac src/main/Main.java
-   java src/main/Main
-   ```
-
-------
-
-## 🚦 Uso
-
-Este proyecto es un sistema de gestión básico que permite realizar  operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una lista de  entidades (por ejemplo, estudiantes, productos, etc.). Aquí te  explicamos cómo usarlo:
-
-### Ejecución del proyecto
-
-1. Compila y ejecuta la clase `Main`:
-
-   bash
-
-   Copy
-
-   ```bash
-   javac src/main/Main.java
-   java src/main/Main
-   ```
-
-2. Sigue las instrucciones en la consola para interactuar con el sistema.
-
-### Ejemplo de uso
-
-java
-
-Copy
-
-```bash
-// Crear un nuevo objeto
-Person estudiante = new Person("Juan", "Pérez", 20);
-
-// Mostrar información del estudiante
-System.out.println(Person.get_name());
+```
+com.mycompany.finaltaller
+├── Main.java          # Punto de entrada de la aplicación
+├── Person.java        # Clase que representa una persona con atributos como nombre, edad y fatiga
+├── Menu.java          # Lógica del menú de la aplicación
+├── Inputs.java        # Manejo de entrada de datos del usuario
+├── Outputs.java       # Manejo de salida de datos
 ```
 
+## 🛠 Instalación y Ejecución
 
-------
+### Prerrequisitos
 
-## 🤝 Contribución
+Antes de ejecutar el proyecto, asegúrate de tener instalados:
 
-¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, sigue estos pasos:
+- **JDK 8 o superior**
+- **Apache Maven**
 
-1. Haz un fork del repositorio.
+### 📥 Clonación del repositorio
 
-2. Crea una rama para tu contribución:
+```sh
+git clone <URL_DEL_REPOSITORIO>
+cd finaltaller
+```
 
-   bash
+### 🔧 Compilación del proyecto
 
-   Copy
+```sh
+mvn clean compile
+```
 
-   ```bash
-   git checkout -b mi-contribucion
-   ```
+### ▶️ Ejecución del programa
 
-3. Realiza tus cambios y haz commit:
+```sh
+mvn exec:java -Dexec.mainClass="com.mycompany.finaltaller.Main"
+```
 
-   bash
+## 📌 Funcionamiento
 
-   Copy
+1. El programa solicita al usuario ingresar su nombre y edad.
+2. Se presenta un menú con opciones para:
+   - 🏃 Correr (aumenta la fatiga).
+   - 😴 Descansar (disminuye la fatiga).
+   - ℹ️ Mostrar información del usuario.
+   - ❌ Salir de la aplicación.
+3. Se utilizan cuadros de diálogo (`JOptionPane`) para interactuar con el usuario.
 
-   ```bash
-   git commit -m "Añade nueva funcionalidad"
-   ```
+## 👤 Autor
 
-4. Sube tus cambios a GitHub:
-
-   bash
-
-   Copy
-
-   ```
-   git push origin mi-contribucion
-   ```
-
-5. Abre un Pull Request y describe tus cambios.
-
-
-------
-
-## 📧 Contacto
-
-Si tienes preguntas, sugerencias o simplemente quieres ponerte en contacto, no dudes en escribirme:
-
-- **Nombre**: Juan Jose Basto Gonzalez
-- **Email**: [jjosebasto@tus.edo.co](jjosebasto@tus.edo.co)
-- **GitHub**: [@JuanJoseBastoGonzalez](https://github.com/JuanJoseBastoGonzalez)
-- **LinkedIn**: [Juan Jose Basto Gonzalez](https://www.linkedin.com/in/juan-jose-basto-gonzalez-49945023a/) 
+- **Juan José Basto González**
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/juan-jose-basto-gonzalez-49945023a/)
+- [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/JuanJoseBastoGonzalez)
